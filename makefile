@@ -10,7 +10,8 @@ PROGRAMMER_ID   = wiring
 BAUDRATE        = 115200
 AVRDUDE_FLAGS   = -D
 
-SERIAL_NUMBER 	= 854353330313518002A1
+SERIAL_NUMBER 	= $(shell cat arduino-serialnumber.txt)
+#SERIAL_NUMBER   = 854353330313518002A1
 #PORT            = /dev/ttyACM0
 #$(eval PORT:=$(shell python build_tools/arduino-device.py --serialnum=$(SERIAL_NUMBER)))
 
