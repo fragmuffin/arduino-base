@@ -63,7 +63,7 @@ void initialize_hardware(void) {
     // ============== Timers & Overflow Interrupts ==============
     // --- Operational Indicator
     TCCR1B = (1 << CS12) | (1 << WGM12); // Pre-scaler = 256; CTC: Clear Timer on Compare mode
-    OCR1A  = (uint16_t)(((EXT_CLOCK_FREQ << 8) / INDICATOR_FLASH_FREQ) - 1); // set Overflow (pre-scaler of 256)
+    OCR1A  = (uint16_t)(((EXT_CLOCK_FREQ >> 8) / INDICATOR_FLASH_FREQ) - 1); // set Overflow (pre-scaler of 256)
     TIMSK1 = (1 << OCIE1A); // enable Output Compare 1 overflow interrupt
 
     // ============== UART: 0 ==============
