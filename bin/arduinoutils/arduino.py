@@ -1,6 +1,6 @@
 
 import re
-from serial.tools.list_ports_posix import comports
+from serial.tools.list_ports import comports
 
 # Connectivity Description:
 #

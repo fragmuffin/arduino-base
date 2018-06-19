@@ -6,7 +6,7 @@ import inspect
 import argparse
 
 _this_path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-sys.path.append(os.path.join(_this_path, '../pylib'))
+sys.path.append(os.path.join(_this_path))
 import arduinoutils
 
 
